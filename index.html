@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Phillip Kim</title>
+    <link rel="icon" type="image/x-icon" href="Links/LOGO1.ico" />
+    <script defer src="script.js"></script>
+    <script src="tsparticles.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2/tsparticles.preset.fireworks.bundle.min.js"></script>
+
+
+    <script
+      src="https://kit.fontawesome.com/79462207ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/jquery.drawsvg.js"></script>
+  </head>
+  <!-- Loading  -->
+  <body>
+    <!-- <div class="loader_wrapper">
+      <div class="wrapper">
+        <svg
+          version="1.1"
+          id="loader_image"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="40px"
+          y="60px"
+          viewBox="0 0 1000 1000"
+          style="enable-background: new 0 0 595.28 841.89"
+          xml:space="preserve"
+        >
+          <style type="text/css">
+            .st2 {
+              stroke: rgb(191, 191, 255);
+              stroke-miterlimit: 7;
+              stroke-width: 4;
+              stroke-linecap: round;
+              fill: none;
+            }
+          </style>
+          <path
+            class="st2"
+            d="M257,201.8h-47.2v40.4h48.4c39.2,0,61.2,16.8,61.2,50.4c0,32.4-20.4,50.8-61.2,50.8h-48.4v38.8H257
+c66.4,0,106.4-33.6,106.4-90C363.4,233.8,323.4,201.8,257,201.8z "
+          />
+          <path
+            class="st2"
+            d="M191,242.2v-40.4h-44v280h44v-99.6v-38.8V242.2z"
+          />
+        </svg>
+      </div>
+    </div> -->
+
+    <section class="nav__bar">
+      <nav class="nav">
+        <div class="nav-fluid">
+          <div class="logo__main">
+            <svg
+              version="1.1"
+              id="logo"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="20px"
+              y="20px"
+              viewBox="0 0 595.28 841.89"
+              style="enable-background: new 0 0 595.28 841.89"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st1 {
+                  fill: rgb(188, 211, 236);
+                }
+              </style>
+
+              <path
+                class="st1"
+                d="M363.42,292.17c0,56.4-40,90-106.4,90h-47.2v-38.8h48.4c40.8,0,61.2-18.4,61.2-50.8c0-33.6-22-50.4-61.2-50.4h-48.4v-40.4h47.2C323.42,201.77,363.42,233.77,363.42,292.17z M191,242.17v-40.4h-44v280h44v-99.6v-38.8V242.17z"
+              />
+            </svg>
+          </div>
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="#section-1"> About </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section-2"> Experience </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section-3"> Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <header class="header">
+      <div class="landing">
+        <div id ="tsparticles-custom"></div>
+        <section class="landing__title">
+          <span class="landing__highlight a"> &#160 Phillip Kim</span>
+          <br />
+          <span class="landing__highlight b">Frontend Web</span>
+        </section>
+        <div class="button__landing">
+          <i class="fa-solid fa-angle-down fa-2x glow" aria-hidden="true"></i>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="section" id="section-1">
+        <h2 class="section_name">About
+        </h2>
+        <p class="about_info">
+          Hey! I'm Phillip! I graduated from University of California - San
+          Diego in 2021 with a B.S. in Human Computer Interaction (UI/UX). I
+          have an interest in Web Development. I played around with HTML, CSS
+          and JavaScript, and loved making cool designs. I recently learned SASS
+          and love making cool animations for a more unique and interactive web
+          design.
+        </p>
+      </section>
+      <section class="section" id="section-2">
+        <h2 class="section_name">Projects</h2>
+        <h3 class="section_title">Here are some projects I've worked on!</h3>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FEYtt0E4ENxZlbZdrDxLgtx%2FMegaYum%3Fnode-id%3D136%253A43%26starting-point-node-id%3D136%253A0" allowfullscreen></iframe>
+      </section>
+
+      <section class="section" id="section-3">
+        <h2 class="section_name">Contact</h2>
+        <form action = "message.php" id = "contactform" method = "POST">
+        <h3 class="contact_font">Contact Me!</h3>
+        <h4 class = "form_name">Name</h4>
+        <input type="text" id ="name" name = "name" placeholder = "Name" required>
+        <h4 class = "form_subject">Subject</h4>
+        <input type="text" id = "subject" name = "subject" placeholder = "Subject">
+        <h4 class = "form_email">Email</h4>
+        <input type="email" id="email" name = "email" placeholder = "Email" required>
+        <h4>Message</h4>
+        <textarea id="message" name = "message" rows="4" placeholder = "Message" required></textarea>
+       <button class ="form_button" type = "submit">Message Me
+        <span class = "icon arrow"></span>
+       </button>
+      </form>
+      </section>
+      <script>
+        // $(window).on('load', function () {
+        //   setInterval(function () {
+        //     $('.loader_wrapper').fadeOut('slow');
+        //     $('body').removeClass('preload');
+        //   }, 1500);
+        // });
+      </script>
+    </main>
+  </body>
+</html>
