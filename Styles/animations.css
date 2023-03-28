@@ -1,0 +1,45 @@
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+    color: #061429;
+  }
+  25% {
+    opacity: 0.5;
+    color: #c54249;
+  }
+  50% {
+    opacity: 1;
+    color: #061429;
+  }
+  75% {
+    opacity: 0.5;
+    color: #c54249;
+  }
+  100% {
+    opacity: 1;
+    color: #061429;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    color: #061429;
+  }
+  25% {
+    opacity: 0.5;
+    color: #c54249;
+  }
+  50% {
+    opacity: 1;
+    color: #061429;
+  }
+  75% {
+    opacity: 0.5;
+    color: #c54249;
+  }
+  100% {
+    opacity: 1;
+    color: #061429;
+  }
+}
+/*# sourceMappingURL=animations.css.map */

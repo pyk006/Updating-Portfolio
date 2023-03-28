@@ -24,11 +24,11 @@ $mail->Host = "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
-$mail->Username = "email";
-$mail->Password = "";
+$mail->Username = "phillipkim.dev@gmail.com";
+$mail->Password = "xfxsdsrqxsypztyj";
 
 $mail->setFrom($email);
-$mail->addAddress("email", "Phil");
+$mail->addAddress("phillipkim.dev@gmail.com", "Phil");
 
 $mail->Subject = $subject;
 $mail->Body = $message;

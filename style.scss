@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
+
 :root {
   --color-backgroundmain: #f8edeb;
   --color-mainbackgrounds: #723c70;
@@ -15,11 +17,16 @@
   --color-main: #f1faee;
   --color-mainbackgroundrgba: rgba(0, 0, 0, 1);
   --color-particles: #fd3d1b;
+  --color-canvas: #24292f;
 }
 
 * {
   box-sizing: inherit;
   margin: 0;
+}
+* ::before,
+::after {
+  box-sizing: inherit;
 }
 
 html {
@@ -47,18 +54,41 @@ html {
 }
 
 body {
-  background-image: url(Links/peter-gargiulo-cGNCepznaV8-unsplash.jpg);
-  background-size: cover;
-  background-position: 55% 45%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-
+  background: linear-gradient(
+    90deg,
+    rgb(4, 3, 31),
+    rgb(41, 5, 5),
+    rgb(5, 22, 41),
+    rgb(35, 4, 44)
+  );
   font-family: 'Bitter', serif;
   font-weight: 150;
   color: rgb(188, 211, 236);
   margin: 0;
   padding: 0;
+}
+
+.landing {
+  background: linear-gradient(
+    90deg,
+    rgb(4, 3, 31),
+    rgb(41, 5, 5),
+    rgb(5, 22, 41),
+    rgb(35, 4, 44)
+  );
+  background-size: 600% 600%;
+  z-index: 4 !important;
+  animation: gradient 40s ease 3;
+}
+
+.landing_box {
+  display: flex;
+  padding-left: 170px;
+  padding-bottom: 150px;
+  background: none;
+  height: 1000px;
+  width: 1600px;
+  mix-blend-mode: color-dodge;
 }
 
 .preload {
@@ -89,7 +119,7 @@ body {
   z-index: 999;
   padding: 15px;
   position: fixed;
-  box-shadow: 10px 5px 10px #834649;
+  box-shadow: -10px 5px 10px #ce1270;
   transition: all 0.25s;
 }
 
@@ -109,7 +139,7 @@ body {
   transform: translateY(0px);
   padding-top: 5px;
   padding-bottom: 5px;
-  box-shadow: 5px 5px 5px #4c6281;
+  box-shadow: -5px 5px 5px #4c6281;
 }
 .nav.sticky .nav__link {
   transition: background-color 0.25s ease-in, color 0.25s ease-in,
@@ -162,8 +192,35 @@ body {
 }
 
 .button__landing {
-  position: relative;
+  padding: 5px;
+  background-color: #723c70;
+  border: #d10000 1px solid;
+  border-radius: 3px;
+  color: rgb(206, 18, 112);
   z-index: 101;
+  transition: width 0.2s ease-in;
+  transform: translateY(-600px);
+}
+
+.start {
+  height: 15px !important;
+  padding-right: 5px;
+  transition: color 0.2s ease-in;
+}
+
+.button__landing:hover {
+  cursor: pointer;
+  .fa-arrow-right {
+    color: #fbfcfd;
+    transform: translate(0.35rem, 0);
+    transition: all 0.2s ease-out;
+  }
+
+  .start {
+    height: 15px !important;
+    color: rgba(46, 205, 226, 0.658);
+    transition: color 0.2s ease-out;
+  }
 }
 
 #logo {
@@ -218,48 +275,91 @@ body {
 }
 
 .landing {
-  position: relative;
+  box-sizing: border-box;
   padding-right: 5rem;
   padding-left: 5rem;
   padding-bottom: 5rem;
+  transform: translateY(-300px);
 }
 
 #tsparticles-custom {
-  position: absolute;
   margin: 0;
   padding: 0;
-  width: 113rem;
-  height: 63rem;
+  width: 50rem;
+  height: 20rem;
+  transform: translateY(540px);
 }
 
 .hidden {
   opacity: 0;
 }
 .section {
+  box-sizing: border-box;
   height: 100%;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  padding-right: 8rem;
+  padding-left: 8rem;
   padding-bottom: 5rem;
+  border-right: 3px solid green;
+  border-left: 3px solid green;
+}
+
+.profile {
+  align-self: center;
+  background-color: white;
+  border-radius: 50%;
+  height: 500px;
+  width: 450px;
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+
+.profile_real {
+  border-radius: 50%;
+  height: 400px;
+  width: 360px;
+  transform: translate(40px, 50px);
+}
+
+.profile_cartoon {
+  position: relative;
+  height: 400px;
+  width: 700px;
+  transform: translate(-135px, -355px);
 }
 
 .landing__highlight {
-  font-size: clamp(35px, 8vw, 70px);
+  font-family: 'Arvo', serif;
+  font-size: clamp(55px, 20vw, 90px);
+  text-shadow: 7px 0 rgb(188, 146, 255);
   font-weight: 250;
   line-height: 1.3;
-  animation: flicker 5s infinite;
+}
+
+.landing__highlight.a {
+  transform: translate(-40px, -710px);
+}
+
+.landing__highlight.b {
+  transform: translate(-20px, -710px);
 }
 
 .landing__highlight.b,
 .landing__highlight.a {
-  color: rgb(188, 211, 236);
+  color: rgb(255, 208, 79);
 }
-.fa-angle-down:hover {
-  cursor: pointer;
-  color: #fbfcfd;
+
+.fa-xl {
+  text-align: center;
+  line-height: 2.5 !important;
+}
+.fa-arrow-right {
+  transition: 0.2s all ease-in;
 }
 
 .glow {
-  text-shadow: 0px 0px 3px #ffffff;
+  text-shadow: 0px 0px 3px rgb(22, 40, 51);
 }
 .section {
   display: flex;
@@ -269,11 +369,15 @@ body {
   transition: color 0.8s;
 }
 
+.section {
+  padding-top: 3.4rem;
+}
 .section.hidden {
   color: rgba(0, 0, 0, 0);
 }
 
 .section_name {
+  width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
@@ -286,8 +390,114 @@ body {
   padding-inline: 120px;
 }
 
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects_outer {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto fill);
+  gap: 15px;
+}
+
+.projects_inner {
+  box-shadow: 0 10px 30px -15px white;
+  height: 190px;
+  width: 190px;
+  padding: 2rem 1.75rem;
+  border-radius: 4px;
+  border: 2px solid white;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
 .contact_font {
   color: var(--color-secondarybackground);
+}
+
+.left_addon.user svg {
+  fill: #acb8c9;
+  height: 18px;
+  align-self: left;
+}
+
+.form_overlay {
+  align-self: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 1);
+  border-radius: 3%;
+  background-color: rgba(27, 18, 41, 0.5);
+  background-blend-mode: soft-light;
+  height: 600px;
+  width: 800px;
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in 0.2s;
+}
+
+#contactform {
+  color: white;
+  width: 250px;
+  height: 600px;
+}
+
+.form_name {
+  line-height: 2.5;
+}
+
+.form {
+  display: flex;
+  font-family: 'Lora', 'serif';
+  color: #cedbee;
+  border: none;
+  outline: none;
+  border-bottom: 1px white solid;
+  background: none;
+  line-height: 3;
+}
+
+#name::placeholder,
+#email::placeholder {
+  font-size: large;
+}
+
+#message {
+  height: 209px;
+  width: 434px;
+  border: 1px solid;
+  border-radius: 2%;
+}
+
+.form_button {
+  font-family: 'Lora', 'serif';
+  color: white;
+  padding: 8px;
+  height: 30px;
+  width: 75px;
+  color: black;
+  border-radius: 7%;
+  background: #0c416d;
+  transition: ease-out 0.4s;
+}
+
+.form_button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 100px 0 0 #d80286;
+}
+
+.contact_reveal {
+  background-color: #89919e;
+  border-radius: 5px;
+  width: 70px;
+  transition: ease-in 0.2s;
+  padding: 5px;
+}
+.contact_reveal:hover {
+  cursor: pointer;
 }
 
 // .form_button {
@@ -303,128 +513,44 @@ body {
 
 //Animations
 
-@keyframes flicker {
-  from {
-    opacity: 1;
+@keyframes colorglitch {
+  $interval: 30;
+  @for $i from 1 through $interval {
+    #{percentage($i*(1/$interval))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
   }
+}
 
-  4% {
-    opacity: 0.9;
+@keyframes rotate {
+  $degrees: -15deg;
+  0% {
+    transform: rotate(0deg);
   }
-
-  6% {
-    opacity: 0.85;
+  25% {
+    transform: rotate($degrees + -$degrees);
   }
-
-  8% {
-    opacity: 0.95;
+  50% {
+    transform: rotate($degrees + -$degrees + -$degrees);
   }
-
-  10% {
-    opacity: 0.9;
+  75% {
+    transform: rotate($degrees + -45deg);
   }
-
-  11% {
-    opacity: 0.922;
+  100% {
+    transform: rotate(-90deg);
   }
+}
 
-  12% {
-    opacity: 0.9;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-
-  14% {
-    opacity: 0.95;
+  50% {
+    background-position: 100% 50%;
   }
-
-  16% {
-    opacity: 0.98;
-  }
-
-  17% {
-    opacity: 0.9;
-  }
-
-  19% {
-    opacity: 0.93;
-  }
-
-  20% {
-    opacity: 0.99;
-  }
-
-  24% {
-    opacity: 1;
-  }
-
-  26% {
-    opacity: 0.94;
-  }
-
-  28% {
-    opacity: 0.98;
-  }
-
-  37% {
-    opacity: 0.93;
-  }
-
-  38% {
-    opacity: 0.5;
-  }
-
-  39% {
-    opacity: 0.96;
-  }
-
-  42% {
-    opacity: 1;
-  }
-
-  44% {
-    opacity: 0.97;
-  }
-
-  46% {
-    opacity: 0.94;
-  }
-
-  56% {
-    opacity: 0.9;
-  }
-
-  58% {
-    opacity: 0.9;
-  }
-
-  60% {
-    opacity: 0.99;
-  }
-
-  68% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 0.9;
-  }
-
-  72% {
-    opacity: 0.95;
-  }
-
-  93% {
-    opacity: 0.93;
-  }
-
-  95% {
-    opacity: 0.95;
-  }
-
-  97% {
-    opacity: 0.93;
-  }
-
-  to {
-    opacity: 1;
+  100% {
+    background-position: 0% 50%;
   }
 }

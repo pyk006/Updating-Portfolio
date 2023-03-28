@@ -73,6 +73,17 @@ $(window).scroll(function () {
   }
 });
 
+//MegaYum button reveal
+// const megaYum = document.querySelector('.figma_reveal');
+// const figma = document.querySelector('.figma');
+// megaYum.addEventListener('click', function () {
+//   if (figma.classList.contains('hidden')) {
+//     figma.classList.remove('hidden');
+//   } else {
+//     figma.classList.add('hidden');
+//   }
+// });
+
 //logo animation loading screen
 // let count = 0;
 // const mySVG = $('#loader_image').drawsvg();
@@ -85,7 +96,7 @@ $(window).scroll(function () {
 
 // Particles
 tsParticles.load('tsparticles-custom', {
-  duration: 30,
+  duration: 60,
   particles: {
     move: {
       enable: true,
@@ -124,3 +135,34 @@ tsParticles.load('tsparticles-custom', {
 //     body: formData,
 //   });
 // }
+
+//On hover 'Start' appears
+
+const landingStart = document.querySelector('.fa-solid');
+const start = document.querySelector('.start');
+landingStart.addEventListener('mouseover', () => {
+  start.classList.remove('.hidden');
+});
+
+//Contact form reveal
+
+const contactbutton = document.querySelector('.contact_reveal');
+const formoverlay = document.querySelector('.form_overlay');
+contactbutton.addEventListener('click', () => {
+  if (!contactbutton.classList.contains('hidden')) {
+    contactbutton.classList.add('hidden');
+    formoverlay.scrollIntoView({ behavior: 'smooth' });
+    formoverlay.classList.remove('hidden');
+  }
+});
+
+//Profile Image change from cartoon to real
+
+const profile = document.querySelector('.profile');
+const profileCartoon = document.querySelector('profile_cartoon');
+const profileReal = document.querySelector('profile_real');
+profile.addEventListener('click', () => {
+  console.log(profileCartoon.classList());
+});
+
+// Time delayed 60s CSS change for gradient
